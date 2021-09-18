@@ -6,8 +6,8 @@ import { Home } from "../pages/home";
 export const App = () => {
    return (
        <Fragment>
-            <Layout /> 
             <BrowserRouter>
+                <Layout /> 
                 <Route path='/' component={Home} />
             </BrowserRouter>
        </Fragment>
