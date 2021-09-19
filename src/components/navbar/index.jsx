@@ -37,6 +37,14 @@ export const Navbar = () => {
     "nov",
     "dic",
   ];
+  const [toggleMenu, setToggleMenu] = useState({active: '',})
+  const HanddleToggleClassMenu = () => {
+    if(toggleMenu.active === '') {
+      setToggleMenu({active: 'active'})
+    } else {
+      setToggleMenu({active: ''})
+    }
+  }
 
   const [dateTime, setDateTime] = useState({
     hours: date.getHours(),
@@ -48,7 +56,6 @@ export const Navbar = () => {
     numberDay: date.getDate(),
     month: date.getMonth(),
   });
-
   useEffect(() => {
     const timer = setInterval(() => {
       const date = new Date();
@@ -84,14 +91,14 @@ export const Navbar = () => {
           </span>
         </div>
         <div className="container corner navbar">
-          <button className="navBx">
+          <button onClick={HanddleToggleClassMenu} className={`navBx ${toggleMenu.active}`}>
             <div className="nav line-1"></div>
             <div className="nav line-2"></div>
             <div className="nav line-3"></div>
           </button>
         </div>
       </nav>
-      <nav className="menu-toggle">
+      <nav className={`menu-toggle ${toggleMenu.active}`}>
         <div className="menu">
           <NavLink className="link link-1 link-bx" exact to="/" activeClassName='active'>
             Home

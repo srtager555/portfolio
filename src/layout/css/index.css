@@ -1,0 +1,11 @@
+:root {
+    --p-black: #202124;
+    --border: #707070;
+    --activeLink: #bca9a9;
+  }
+  
+  * {
+    font-family: "Poppins", Arial;
+    box-sizing: border-box;
+    transition: 0.5s;
+  }
