@@ -8,4 +8,6 @@
     font-family: "Poppins", Arial;
     box-sizing: border-box;
     transition: 0.5s;
+    margin: 0;
+    padding: 0;
   }

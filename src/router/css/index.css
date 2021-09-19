@@ -1,0 +1,6 @@
+.container-master {
+    position: relative;
+    margin-top: 89px;
+    width: 100%;
+    height: calc(100vh - 89px);
+}
