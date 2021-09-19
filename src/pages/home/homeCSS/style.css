@@ -4,7 +4,7 @@
 
 .home-bg {
     position: absolute;
-    top: calc(50% + (89px / 2)); left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     height: calc(100vh - 89px);
@@ -24,6 +24,8 @@
     color: var(--p-black);
 }
 .container__route.container__route-title {
+    position: absolute;
+    top: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +38,40 @@
     display: inline-block;
     width: 70%;
     font-size: 23px;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
-} 
+}
+
+.container__route.container__route-show {
+    position: absolute;
+    right: 99px;
+    top: calc(65% + 89px);
+    font-size: 19px;
+    padding: 19px 26px;
+    border: none;
+}
+.container__route.container__route-show span {
+    font-weight: 300;
+    position: relative;
+}
+.container__route.container__route-show span::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border);
+}
+
+.container__route.container__route-name {
+    position: absolute;
+    bottom: 64px;
+    right: -63px;
+    display: inline-block;
+    padding: 30px 30px;
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+.container__route.container__route-name span {
+    font-size: 25px;
+}
