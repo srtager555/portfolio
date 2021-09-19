@@ -11,13 +11,19 @@
     height: 100%;
 }
 nav.active ~ .container__master .container__master-overflow {
-    transform: scale(1.2);
+    transform: scale(1.01);
     filter: blur(10px);
+    transition: 1s;
 }
 
 @media (min-width: 1680px) {
     .container__master {
         margin-top: 0px;
         height: 100vh;
+    }
+    nav.active ~ .container__master .container__master-overflow {
+        transform: scale(1.1);
+        filter: blur(10px);
+        transition: .5s;
     }
 }

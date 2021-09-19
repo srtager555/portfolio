@@ -86,7 +86,7 @@
     font-size: 25px;
 }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
     .container__route.container__route-title span {
         width: 80%;
         font-size: 18px;
