@@ -75,7 +75,7 @@ export const Navbar = () => {
 
   return (
     <Fragment>
-      <nav>
+      <nav className={toggleMenu.active}>
         <div className="line line-1"></div>
         <div className="line line-2"></div>
 

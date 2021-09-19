@@ -9,8 +9,10 @@ export const App = () => {
        <Fragment>
             <BrowserRouter>
                 <Layout /> 
-                <div className="container-master">
+                <div className="container__master">
+                    <div className="container__master-overflow">
                      <Route path='/' component={Home} />
+                    </div>
                 </div>
             </BrowserRouter>
        </Fragment>

@@ -1,4 +1,4 @@
-.container-master {
+.container__master {
     position: relative;
     margin-top: 89px;
     width: 100%;
@@ -6,9 +6,17 @@
     overflow: hidden;
     /* max-width: 1200px; */
 }
+.container__master-overflow {
+    width: 100%;
+    height: 100%;
+}
+nav.active ~ .container__master .container__master-overflow {
+    transform: scale(1.2);
+    filter: blur(10px);
+}
 
 @media (min-width: 1680px) {
-    .container-master {
+    .container__master {
         margin-top: 0px;
         height: 100vh;
     }
