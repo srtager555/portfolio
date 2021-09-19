@@ -3,10 +3,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0;left: 0; 
+    top: 0;left: 50%; 
+    transform: translateX(-50%);
     width: 100%;
     max-width: 1200px;
-    margin:0  auto;
     height: 89px;
     padding: 18px 0;
     background-color: #fff;

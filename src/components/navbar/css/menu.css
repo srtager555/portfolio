@@ -1,12 +1,14 @@
 .menu-toggle {
   position: fixed;
   top: 89px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   height: calc(100vh - 89px);
   padding: 0;
   background-color: transparent;
   z-index: 9;
+  overflow: hidden;
 }
 .menu-toggle :is(.menu, .copyright) {
   display: flex;
@@ -87,4 +89,10 @@
 }
 .menu-toggle.active .copyright .container-2 {
     transform: translateX(0) translateY(-1px);
+}
+
+@media (min-width: 1024px) {
+  .menu-toggle .copyright .container .link.link-bigBx {
+    width: 460px;
+  }
 }

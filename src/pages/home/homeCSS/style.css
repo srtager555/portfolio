@@ -15,6 +15,13 @@
     z-index: -1;
 }
 
+.container__home {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
 .container__route {
     padding: 10px;
     background-color: #fff;
@@ -25,7 +32,8 @@
 }
 .container__route.container__route-title {
     position: absolute;
-    top: 65%;
+    bottom: 225.553px;
+    transform: translateY(100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,10 +53,12 @@
 .container__route.container__route-show {
     position: absolute;
     right: 99px;
-    top: calc(65% + 89px);
+    bottom: calc(226.553px - 89px);
+    transform: translateY(100%);
     font-size: 19px;
     padding: 19px 26px;
     border: none;
+    cursor: pointer;
 }
 .container__route.container__route-show span {
     font-weight: 300;
@@ -76,9 +86,64 @@
     font-size: 25px;
 }
 
-@media (max-width: 400px) {
+@media (min-width: 400px) {
     .container__route.container__route-title span {
         width: 80%;
         font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container__route.container__route-title {
+        bottom: calc(225.553px / 2); left: 2.5%;
+        transform: translateY(50%);
+        justify-content: flex-start;
+        width: calc(95% - 99px);
+        padding: 20px 42px;
+        height: auto;
+        border: none;
+    }
+    .container__route.container__route-title span {
+        font-size: 44px;
+        text-align: start;
+        width: 60%;
+    }
+
+    .container__route.container__route-show {
+        position: absolute;
+        right: calc(99px * 1.4);
+        bottom: calc(225.553px / 2);
+        transform: translateY(50%);
+        font-size: 19px;
+        padding: 19px 26px;
+        border: 1px solid var(--border);
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-bg {
+        height: 100vh;
+        background-size: 200%;
+    }
+    .container__route.container__route-title {
+        left: 50%;
+        transform: translateY(50%) translateX(-50%);
+        align-items: flex-start;
+        justify-content: center;
+        height: 280.553px;
+        width: 40%;
+    }
+    .container__route.container__route-title span {
+        width: 85%;
+        text-align: center;
+    }
+    .container__route.container__route-show {
+        position: absolute;
+        right: 0%; left: 50%;
+        bottom: calc(225.553px / 5);
+        transform: translateY(50%) translateX(-50%);
+        font-size: 19px;
+        padding: 19px 26px;
+        border: 1px solid var(--border);
     }
 }

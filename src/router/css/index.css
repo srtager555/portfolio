@@ -4,4 +4,12 @@
     width: 100%;
     height: calc(100vh - 89px);
     overflow: hidden;
+    /* max-width: 1200px; */
+}
+
+@media (min-width: 1680px) {
+    .container-master {
+        margin-top: 0px;
+        height: 100vh;
+    }
 }
