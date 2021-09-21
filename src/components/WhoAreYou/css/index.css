@@ -1,0 +1,123 @@
+.show__container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100vh;
+    z-index: 11;
+}
+.show__container.active {
+    display: block;
+}
+.background-transition {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 150%;
+    opacity: 0;
+}
+.background-transition.active {
+    top: 0%;
+    opacity: 1;
+    height: 100%;
+}
+.background-transition div {
+    width: 100%;
+    height: 25vh;
+    background-color: #fff;
+}
+
+.close-show {
+    height: 89px;
+    width: 89px;
+    right: 5%;
+    position: absolute;
+    top: 5%;
+    z-index: 11;
+}
+.close-show .line {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 1px;
+    background-color: var(--border);
+    opacity: 0;
+    transition: .5s;
+}
+.close-show.active .line {
+    opacity: 1;
+}
+
+.close-show .line-1 {
+    transform: translate(-50%, -50%) rotate(25deg);
+}
+.close-show .line-2{
+    transform: translate(-50%, -50%) rotate(-25deg);
+}
+.close-show.active .line-1 {
+    transform: translate(-50%, -50%) rotate(-150deg);
+}
+.close-show.active .line-2{
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+
+.Ahri {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    border-radius: 100px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: 1s;
+    z-index: 12;
+}
+.Ahri .glass {
+    width: inherit;
+    height: inherit;
+    background-color: var(--p-black);
+}
+.Ahri.Ahri-kda {
+    left: 35%;
+    top: 115%;
+}
+.Ahri.Ahri-bosque {
+    left: 55%;
+    top: 120%;
+}
+.Ahri.Ahri-flor {
+    left: 45%;
+    top: 115%;
+}
+.Ahri.Ahri-coven {
+    left: 33%;
+    top: 150%;
+}
+
+
+.Ahri.active {
+    height: 150px;
+}
+.Ahri.active.Ahri-kda {
+    left: 65%;
+    top: 30%;
+}
+.Ahri.active.Ahri-bosque {
+    left: 35%;
+    top: 30%;
+}
+.Ahri.active.Ahri-flor {
+    left: 35%;
+    top: 65%;
+}
+.Ahri.active.Ahri-coven {
+    left: 65%;
+    top: 65%;
+}

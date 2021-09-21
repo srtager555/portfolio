@@ -1,7 +1,7 @@
 .menu-toggle {
   position: fixed;
   top: 89px;
-  left: 50%;
+  left: 150%;
   transform: translateX(-50%);
   width: 100%;
   height: calc(100vh - 89px);
@@ -9,7 +9,14 @@
   background-color: transparent;
   z-index: 9;
   overflow: hidden;
+  transition: 0s;
+  transition-delay: 1s;
 }
+.menu-toggle.active {
+  left: 50%;
+  transition: 0s;
+  transition-delay: 0s;
+} 
 .menu-toggle :is(.menu, .copyright) {
   display: flex;
   flex-direction: column;
